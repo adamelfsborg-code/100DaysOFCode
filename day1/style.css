@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+body {
+    background-color: #0CBB87;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+}
+
+.container  .spinning-text  {
+    margin: auto;
+}
+
+.toggle-panel {
+    margin: auto;
+}
+
+.container .spinning-text h4{
+    margin: auto;
+    color: #ddd;
+    font-size: 200px;
+    font-family: 'Modak', cursive;
+}
+
+
+
+.animation{
+    animation: spinning-text 10s linear infinite;
+}
+
+
+@keyframes spinning-text {
+    0% {
+        transform: rotateY(0deg);
+    }10% {
+        color: #1CE4A9 ;
+    }20% {
+        color: #22F6B7;
+    }30% {
+        color: #22F6B7;
+    }40% {
+        color: #097555;
+    }50% {
+        color: #0DDCC4;
+
+    }60% {
+        color: #1CF4DB;
+    }70% {
+        color: #0E6E8A;
+    }80% {
+        color: #9B2BF0;
+    }90% {
+        color: #F34C8F;
+    }
+    100% {
+        color: #F881B0;
+        transform: rotateY(-360deg);
+
+      }
+}
+
+
