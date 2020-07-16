@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #400000 ;
+}
+
+button {
+    background-color: #400000 !important;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+}
+
+
+.container .tip-calculator {
+    margin: auto;
+    width: 20vw;
+    background-color: #fff;
+    border-radius: 20px;
+
+}
+
+.header {
+    width: 100%;
+    background: #400000;
+    border: 1px solid #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.tip-result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tip-result .content {
+    z-index: 100;
+    display: none;
+    width: 20vw;
+    background-color: #fff;
+    border-radius: 20px;
+    height: 47vh;
+}
+
+.tip-result .content .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
