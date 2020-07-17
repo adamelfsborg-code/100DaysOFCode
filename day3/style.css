@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #192841 ;
+}
+
+button {
+    background-color: #192841 !important;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+}
+
+.container .converter {
+    width: 40vw;
+    margin: auto;
+}
+
+.units {
+    margin-top: 10rem;
+    border-radius: 20px;
+}
+
+.units .unit {
+    margin: 1rem;
+    display: flex;
+}

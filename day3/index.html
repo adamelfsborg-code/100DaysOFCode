@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      
+
+    <div class="container">
+      <div class="converter">
+        <div class="header">
+          <h4 class="text-center text-white">Converter</h4>
+        </div>
+        <div class="metric mt-4">
+          <label class="my-1 mr-2 text-white" for="Measurement">Choose Measurement</label>
+          <select class="custom-select my-1 mr-sm-2" id="Measurement" onchange="javascript:measurement()">
+            <option selected>Choose...</option>
+            <option value="1">Mass</option>
+            <option value="2">Temperature</option>
+            <option value="3">Length</option>
+          </select>
+        </div>
+
+        <div class="units">
+
+          <div class="unit unit-mass" style="display: none;">
+            <div class="pick m-1 mt-5">
+              <h4 class="text-white">Pick a mass unit</h4>
+              <input type="number" id="convert-mass" class="w-100">
+              <select class="custom-select my-1 mr-sm-2" id="pickedunit-mass">
+                <option selected>Choose Mass Unit</option>
+                <option value="1">Grams</option>
+                <option value="2">Kilogram</option>
+                <option value="3">Tons</option>
+              </select>
+            </div>
+            <p class="text-white mt-5" style="font-size: 30px;">=</p>
+            <div class="convert-into m-1 mt-5">
+              <h4 class="text-white text-right">Convert into</h4>
+              <input type="text" id="converted-mass" class="w-100" disabled>
+              <select class="custom-select my-1 mr-sm-2" id="convertedunit-mass">
+                <option selected>Choose Mass Unit</option>
+                <option value="1">Grams</option>
+                <option value="2">Kilogram</option>
+                <option value="3">Tons</option>
+              </select>
+            </div>
+          </div>
+      
+          
+          <div class="unit unit-temperature" style="display: none;">
+            <div class="pick">
+              <div class="pick m-1 mt-5">
+                <h4 class="text-white">Pick a temperature unit</h4>
+                <input type="number" id="convert-temp" class="w-100">
+                <select class="custom-select my-1 mr-sm-2" id="pickedunit-temp">
+                  <option selected>Choose Temperature Unit</option>
+                  <option value="1">Celcius</option>
+                  <option value="2">kelvin</option>
+                  <option value="3">Fahrenheit</option>
+                </select>
+              </div>
+            </div>
+              <p class="text-white mt-5" style="font-size: 30px;">=</p>
+              <div class="convert-into m-1 mt-5">
+                <h4 class="text-white text-right">Convert into</h4>
+                <input type="text" id="converted-temp" class="w-100" disabled>
+                <select class="custom-select my-1 mr-sm-2" id="convertedunit-temp">
+                  <option selected>Choose Temperature Unit</option>
+                  <option value="1">Celcius</option>
+                  <option value="2">kelvin</option>
+                  <option value="3">Fahrenheit</option>
+                </select>
+              </div>
+         
+          </div>
+
+          <div class="unit unit-length" style="display: none;">
+            <div class="pick">
+              <div class="pick m-1 mt-5">
+                <h4 class="text-white">Pick a length unit</h4>
+                <input type="number" id="convert-len" class="w-100">
+                <select class="custom-select my-1 mr-sm-2" id="pcikedunit-len">
+                  <option selected>Choose Length Unit</option>
+                  <option value="1">Millimeter</option>
+                  <option value="2">Centimeter</option>
+                  <option value="3">meter</option>
+                </select>
+              </div>
+            </div>
+            <p class="text-white mt-5" style="font-size: 30px;">=</p>
+            <div class="convert-into">
+              <div class="convert-into m-1 mt-5">
+                <h4 class="text-white text-right">Convert into</h4>
+                <input type="text" id="converted-len" class="w-100" disabled>
+                <select class="custom-select my-1 mr-sm-2" id="convertedunit-len">
+                  <option selected>Choose Length Unit</option>
+                  <option value="1">Millimeter</option>
+                  <option value="2">Centimeter</option>
+                  <option value="3">meter</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="panel text-center">
+        <button class="btn btn-light text-white" onclick="Javascript:convert()">Submit</button>
+      </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
