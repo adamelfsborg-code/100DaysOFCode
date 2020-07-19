@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+}
+
+.container .stopwatch {
+    margin: auto;
+    background: #222;
+    border-radius: 50px;
+    box-shadow: 10px 5px 5px 5px #333;
+}
